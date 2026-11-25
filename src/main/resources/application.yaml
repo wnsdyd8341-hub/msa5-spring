@@ -3,5 +3,10 @@ spring:
     name: msa5-spring
   web:
     error:
-      include-stacktrace: always
-      include-message: always
+      include-stacktrace: never
+      include-message: never
+logging:
+  level:
+    root: info
+    org.msa.msa5spring: debug
+debug: true

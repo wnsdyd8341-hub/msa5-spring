@@ -49,7 +49,7 @@ public class RequestMappingController {
     // @GetMapping("/segment/test/my")
     // public String test(){
     //     return "Test";
-    //}
+    // }
 
     // @ModelAttribute : 폼데이터로 오는거 받거나 세그먼트로 오는거 받는거
     // Form data 로 보낸값 받는거
