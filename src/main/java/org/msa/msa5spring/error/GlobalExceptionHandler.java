@@ -45,6 +45,8 @@ public class GlobalExceptionHandler {
                         fieldError -> fieldError.getDefaultMessage() != null ? fieldError.getDefaultMessage() : "유효하지 않은 값.", //밸류값
                         (existing,replacement) -> existing));  // 람다식 두개의 string타입을 넣고 existing 반환 existing 기존값
                         // replacement 새로운 값
+        log.debug("{}\\n{}}","유효성 체크 에러",errors);
+
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(
                 new GlobalResponseDTO("E01","유효성 체크 에러",errors));
         // 결과 보고싶으면 postMan에서 validation 실행
