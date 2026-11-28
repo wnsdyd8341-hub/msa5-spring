@@ -6,7 +6,13 @@ spring:
       include-stacktrace: never
       include-message: never
 logging:
+  file: # 에러 메세지를 찍을때 파일을 생성할건데 파일 경로를 logs/error.log  여기로 하겠다 라는 코드
+    name: logs/error.log
   level:
-    root: info
-    org.msa.msa5spring: debug
+    # error > warn > info > debug > trace 에러 레벨
+    # 현업에서는 root :error   밑에껀 warn
+    # root는 전체파일 ,  < -- org.msa.msa5spring 그 아래 파일
+    root: warn  # warn이상 에러 체크
+    org.msa.msa5spring: debug # 패키지 경로 , 디버그이상 에러 체크
 debug: true
+# debug: false 지정된 곳에서 발생한 에러정보만
